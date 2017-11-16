@@ -1,0 +1,38 @@
+<div fxLayout="column" fxLayoutAlign="center center" *ngIf="!CTAAdded" >
+  <h2>We provide a number of Call To Actions (CTAs) that allow your viewer to take the next action step directly from your videos</h2>
+  <h3> Let's start by creating a personalized CTA for you. Choose any of the below to begin with:</h3>
+  <div fxLayout="row" fxLayoutAlign=" center stretch" fxLayoutWrap fxLayoutGap="20px">
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addCTA()">
+      <mat-icon> forward </mat-icon>
+      <mat-card-title> Auto Forward </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addCTA()">
+      <mat-icon> email </mat-icon>
+      <mat-card-title> Email me </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addCTA()">
+      <mat-icon> call </mat-icon>
+      <mat-card-title> Tap to call </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addCTA()">
+      <mat-icon> file_download </mat-icon>
+      <mat-card-title> Download File </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addCTA()">
+      <mat-icon> content_paste </mat-icon>
+      <mat-card-title> Custom Form </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addCTA()">
+      <mat-icon> code </mat-icon>
+      <mat-card-title> Custom HTML </mat-card-title>
+    </mat-card>
+    <span  *appFlexAlignmentHack ></span>
+  </div>
+</div>
+
+<div  fxLayout="column" fxLayoutAlign="center center" *ngIf="CTAAdded">
+  <h1 > Great! You have successfully completed setting up your account.</h1>
+  <h2 style="color: black"> Let's head over to your dashboard, click next to proceed Next</h2>
+  <button class="mat-raised-button mat-primary" routerLink="/"> Next </button>
+</div>
+
