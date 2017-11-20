@@ -1,0 +1,32 @@
+<div fxLayout="column" fxlayoutAlign="center center" style="width: 450px">
+  <div>
+    <img src="/assets/logo-full.png" width="100%" style="margin-bottom: 20px;">
+  </div>
+  <mat-card fxflex ="100%">
+    <h1>Login</h1>
+    <form fxLayout = "column" fxLayoutAlign="center stretch" fxLayoutGap="10px"
+          [formGroup] = "loginData" (ngSubmit) = "onSubmit()">
+
+      <mat-input-container fxLayoutAlign="center stretch">
+        <input matInput placeholder="enter your email" formControlName="email">
+        <mat-error> Please enter a valid email</mat-error>
+      </mat-input-container>
+
+      <mat-input-container>
+        <input matInput placeholder="enter your password" type="text" formControlName="password">
+        <mat-error> This field is required</mat-error>
+      </mat-input-container>
+
+      <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap = "15px">
+        <mat-spinner *ngIf= "loading"></mat-spinner>
+        <button color = 'primary' mat-raised-button fxLayoutAlign="end stretch" type="submit"
+                [disabled] = !loginData.valid>Login</button>
+        <mat-icon> done </mat-icon>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-around stretch" fxLayoutGap="10px" >
+        <a routerLink="/signup">Create New Account</a>
+        <a routerLink="/forgetpassword">Forgot Password?</a>
+      </div>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,19 @@
+.mat-card {
+  width: 250px;
+  height: 263px;
+  margin: 15px 10px;
+}
+
+img {
+  width: 202px;
+}
+
+#timeSpan {
+  position: absolute;
+  right: 24px;
+  bottom: 85px;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, .6);
+}

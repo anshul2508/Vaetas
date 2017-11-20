@@ -1,0 +1,15 @@
+<div fxLayout="column" fxLayoutAlign="center center" *ngIf="!youtubeAdded">
+    <h2> Vaetas links with your YouTube account to host your videos. </h2>
+    <h3> Each video will automatically be uploaded as
+      <a href="https://support.google.com/youtube/answer/157177" target="_blank" > unlisted</a>,
+      so the only people who will see your videos are those you choose to send them to.</h3>
+    <h3> The only way the general public can search for or find your videos will be if you choose to make a
+      video public. </h3>
+    <button class="mat-raised-button mat-primary" (click)="addYoutube()"> Add Youtube Account </button>
+</div>
+
+<div fxLayout="column" fxLayoutAlign="center center" *ngIf="youtubeAdded">
+  <h1 > Successfully added your youtube account to Vaetas! </h1>
+  <h2 style="color: black"> Click next to proceed to the next step. </h2>
+  <button class="mat-raised-button mat-primary" routerLink="../2"> Next </button>
+</div>

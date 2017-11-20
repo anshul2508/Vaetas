@@ -1,0 +1,40 @@
+<div fxLayout="column" fxLayoutAlign="center center" *ngIf="!emailAdded" >
+  <h3> Select any of these services from which you want to send emails to your audience </h3>
+  <div fxLayout="row" fxLayoutAlign=" center stretch" fxLayoutWrap fxLayoutGap="20px">
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addEmail()">
+      <img src="../../../../../../assets/gmail.png">
+      <mat-card-title> Google </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addEmail()">
+      <img src="../../../../../../assets/outlook.png">
+      <mat-card-title> Outlook </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addEmail()">
+      <img src="../../../../../../assets/mailchimp.png">
+      <mat-card-title> MailChimp </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addEmail()">
+      <img src="../../../../../../assets/Getresponse.png">
+      <mat-card-title> GetResponse </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addEmail()">
+      <img src="../../../../../../assets/aweber.png">
+      <mat-card-title> AWeber </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addEmail()">
+      <img src="../../../../../../assets/icontact.png">
+      <mat-card-title> iContact </mat-card-title>
+    </mat-card>
+    <mat-card fxLayout="column" fxLayoutAlign=" center stretch" fxLayoutGap="20px" (click) = "addEmail()">
+      <img src="../../../../../../assets/constantcontact.png">
+      <mat-card-title> Constant Contact </mat-card-title>
+    </mat-card>
+  </div>
+</div>
+
+<div  fxLayout="column" fxLayoutAlign="center center" *ngIf="emailAdded">
+  <h1 > Successfully added your Email account to Vaetas! </h1>
+  <h2 style="color: black"> You will have the option to add other email accounts from within your Vaetas dashboard.</h2>
+  <h2 style="color: black"> Click next to proceed. </h2>
+  <button class="mat-raised-button mat-primary" routerLink="../3"> Next </button>
+</div>

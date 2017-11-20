@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <div fxFlex="100%" fxLayoutAlign="space-between center">
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap = "20px">
+      <img src="/assets/logo.png" style="margin-bottom: 20px; width: 60px ">
+      <div fxLayout ="row" fxLayoutAlign="center center" fxLayoutGap = "20px">
+        <button mat-raised-button routerLink="/accounts" id = accounts_link routerLinkActive="selected"> <span> Accounts </span></button>
+        <button mat-raised-button routerLink="/ctas" id = ctas_link routerLinkActive="selected"> <span> Call to Actions </span></button>
+        <button mat-raised-button routerLink="/videos" id = videos_link routerLinkActive="selected"> <span> Videos </span></button>
+        <button mat-raised-button routerLink="/emails" id = emails_link routerLinkActive="selected"> <span> Emails </span></button>
+        <button mat-raised-button routerLink="/templates" id = templates_link routerLinkActive="selected"> <span> Templates </span></button>
+      </div>
+    </div>
+    <div fxLayoutAlign="center center">
+      <button mat-raised-button [matMenuTriggerFor]="appMenu">
+        <span> userName </span>
+        <mat-icon> keyboard_arrow_down </mat-icon>
+      </button>
+
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item routerLink="/settings" id="settings"> Settings </button>
+        <button mat-menu-item (click)="logout()"> Logout </button>
+      </mat-menu>
+
+    </div>
+  </div>
+</mat-toolbar>
